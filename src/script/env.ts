@@ -1,4 +1,4 @@
-import { unstable_noStore as noStore } from 'next/cache';
+import { enableDynamicRendering } from '../provider/enable-dynamic-rendering';
 
 import { isBrowser } from '../helpers/is-browser';
 import { PUBLIC_ENV_KEY } from './constants';
@@ -23,7 +23,7 @@ export function env(key: string): string | undefined {
     return window[PUBLIC_ENV_KEY][key];
   }
 
-  noStore();
+  enableDynamicRendering();
 
   return process.env[key];
 }

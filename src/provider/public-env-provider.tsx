@@ -1,8 +1,8 @@
-import { unstable_noStore as noStore } from 'next/cache';
-import { type FC, type PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { getPublicEnv } from '../helpers/get-public-env';
 import { EnvProvider } from './env-provider';
+import { enableDynamicRendering } from './enable-dynamic-rendering';
 
 type PublicEnvProviderProps = PropsWithChildren;
 
@@ -20,11 +20,10 @@ type PublicEnvProviderProps = PropsWithChildren;
  * </PublicEnvProvider>
  * ```
  */
-export const PublicEnvProvider: FC<PublicEnvProviderProps> = ({ children }) => {
-  noStore(); // Opt into dynamic rendering
+export function PublicEnvProvider({ children }: PublicEnvProviderProps) {
+  enableDynamicRendering();
 
-  // This value will be evaluated at runtime
   const publicEnv = getPublicEnv();
 
   return <EnvProvider env={publicEnv}>{children}</EnvProvider>;
-};
+}

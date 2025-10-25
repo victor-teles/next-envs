@@ -7,7 +7,7 @@ In some cases you might have control over the naming of the environment variable
 ```ts
 // next.config.js
 
-const { makeEnvPublic } = require('next-runtime-env');
+const { makeEnvPublic } = require('next-envs');
 
 // Given that `FOO` is declared as a regular env var, not a public one. This
 // will make it public and available as `NEXT_PUBLIC_FOO`.

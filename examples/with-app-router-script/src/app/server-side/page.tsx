@@ -1,4 +1,4 @@
-import { env } from 'next-runtime-env';
+import { env } from 'next-envs';
 
 import styles from './page.module.css';
 

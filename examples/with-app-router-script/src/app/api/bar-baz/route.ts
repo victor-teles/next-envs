@@ -1,4 +1,4 @@
-import { env } from 'next-runtime-env';
+import { env } from 'next-envs';
 
 export async function GET() {
   return Response.json({

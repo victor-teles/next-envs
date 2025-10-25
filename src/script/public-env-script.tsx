@@ -1,10 +1,10 @@
-import { unstable_noStore as noStore } from 'next/cache';
 import { type FC } from 'react';
 import { type ScriptProps } from 'next/script';
 
 import { getPublicEnv } from '../helpers/get-public-env';
 import { type NonceConfig } from '../typings/nonce';
 import { EnvScript } from './env-script';
+import { enableDynamicRendering } from '../provider/enable-dynamic-rendering';
 
 type PublicEnvScriptProps = {
   nonce?: string | NonceConfig;
@@ -31,7 +31,7 @@ export const PublicEnvScript: FC<PublicEnvScriptProps> = ({
   disableNextScript,
   nextScriptProps,
 }) => {
-  noStore(); // Opt into dynamic rendering
+  enableDynamicRendering()
 
   // This value will be evaluated at runtime
   const publicEnv = getPublicEnv();
