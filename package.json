@@ -1,5 +1,5 @@
 {
-  "name": "next-runtime-env",
+  "name": "next-envs",
   "version": "0.0.0-development",
   "description": "Next.js Runtime Environment Configuration - Populates your environment at runtime rather than build time.",
   "main": "build/index.js",
@@ -19,30 +19,31 @@
     "runtime",
     "env",
     "runtime env",
-    "next-runtime-env"
+    "next-runtime-env",
+    "next-envs"
   ],
   "author": "Expatfile.tax LLC",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/expatfile/next-runtime-env.git"
+    "url": "https://github.com/victor-teles/next-envs.git"
   },
   "bugs": {
-    "url": "https://github.com/expatfile/next-runtime-env/issues"
+    "url": "https://github.com/victor-teles/next-envs/issues"
   },
-  "homepage": "https://github.com/expatfile/next-runtime-env#readme",
+  "homepage": "https://github.com/victor-teles/next-envs#readme",
   "dependencies": {
-    "next": "^14",
-    "react": "^18"
+    "next": "^15",
+    "react": "^19"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
     "@types/eslint": "^9.6.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.14",
-    "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.5",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
     "audit-ci": "^7.1.0",
@@ -59,7 +60,7 @@
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "next": "^14",
-    "react": "^18"
+    "next": "^15",
+    "react": "^19"
   }
 }

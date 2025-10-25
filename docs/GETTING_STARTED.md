@@ -11,18 +11,18 @@ We recommend using the script approach, because you can use the environment vari
 1. First, install the package into your project:
 
 ```bash
-npm install next-runtime-env
+npm install next-envs
 # or
-yarn add next-runtime-env
+yarn add next-envs
 # or
-pnpm install next-runtime-env
+pnpm install next-envs
 ```
 
 1. Then add the script to your head in the root layout:
 
 ```tsx
 // src/app/layout.tsx
-import { PublicEnvScript } from 'next-runtime-env';
+import { PublicEnvScript } from 'next-envs';
 
 export default function RootLayout({
   children,
@@ -45,7 +45,7 @@ export default function RootLayout({
 1. Finally, use `env` utility to access the runtime environment variables any where in your app:
 
 ```tsx
-import { env } from 'next-runtime-env';
+import { env } from 'next-envs';
 
 export function MyComponent() {
   const NEXT_PUBLIC_FOO = env('NEXT_PUBLIC_FOO');
@@ -66,18 +66,18 @@ That's it! You can now use the next-runtime-env package to access runtime enviro
 1. First, install the package into your project:
 
 ```bash
-npm install next-runtime-env
+npm install next-envs
 # or
-yarn add next-runtime-env
+yarn add next-envs
 # or
-pnpm install next-runtime-env
+pnpm install next-envs
 ```
 
 2. Then wrap your component with RuntimeEnvProvider, for example in the root layout:
 
 ```tsx
 // src/app/layout.tsx
-import { PublicEnvProvider } from 'next-runtime-env';
+import { PublicEnvProvider } from 'next-envs';
 
 export default function RootLayout({
   children,
@@ -99,7 +99,7 @@ export default function RootLayout({
 3. Finally, use `useEnvContext` hook to access the runtime environment variables in your components:
 
 ```tsx
-import { useEnvContext } from 'next-runtime-env';
+import { useEnvContext } from 'next-envs';
 
 export function MyComponent() {
   const { NEXT_PUBLIC_FOO, NEXT_PUBLIC_BAZ } = useEnvContext();

@@ -1,4 +1,4 @@
-import { makeEnvPublic } from 'next-runtime-env';
+import { makeEnvPublic } from 'next-envs';
 
 export function register() {
   // Here you can define all the environment variables that should be exposed to

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEnvContext } from 'next-runtime-env';
+import { useEnvContext } from 'next-envs';
 
 import styles from './page.module.css';
 
