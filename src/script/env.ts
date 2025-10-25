@@ -1,5 +1,3 @@
-import { enableDynamicRendering } from '../provider/enable-dynamic-rendering';
-
 import { isBrowser } from '../helpers/is-browser';
 import { PUBLIC_ENV_KEY } from './constants';
 
@@ -22,8 +20,6 @@ export function env(key: string): string | undefined {
 
     return window[PUBLIC_ENV_KEY][key];
   }
-
-  enableDynamicRendering();
 
   return process.env[key];
 }

@@ -2,7 +2,6 @@ import type { PropsWithChildren } from 'react';
 
 import { getPublicEnv } from '../helpers/get-public-env';
 import { EnvProvider } from './env-provider';
-import { enableDynamicRendering } from './enable-dynamic-rendering';
 
 type PublicEnvProviderProps = PropsWithChildren;
 
@@ -21,8 +20,6 @@ type PublicEnvProviderProps = PropsWithChildren;
  * ```
  */
 export function PublicEnvProvider({ children }: PublicEnvProviderProps) {
-  enableDynamicRendering();
-
   const publicEnv = getPublicEnv();
 
   return <EnvProvider env={publicEnv}>{children}</EnvProvider>;
