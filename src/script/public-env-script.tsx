@@ -1,8 +1,8 @@
-import { type FC } from 'react';
-import { type ScriptProps } from 'next/script';
+import type { ScriptProps } from 'next/script';
+import type { FC } from 'react';
 
 import { getPublicEnv } from '../helpers/get-public-env';
-import { type NonceConfig } from '../typings/nonce';
+import type { NonceConfig } from '../typings/nonce';
 import { EnvScript } from './env-script';
 
 type PublicEnvScriptProps = {
