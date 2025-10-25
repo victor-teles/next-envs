@@ -21,7 +21,7 @@ In the modern software development landscape, the "[Build once, deploy many][bui
 
 ### 🤝 Compatibility Notes
 
-- **Next.js 15:** Use `next-envs@4.x` for optimal caching support.
+- **Next.js 15/16:** Use `next-envs@4.x` for optimal caching support.
 - **Next.js 14:** Use `next-runtime-env@3.x` for optimal caching support.
 - **Next.js 13:** Opt for [`next-runtime-env@2.x`][app-router-branch-link], tailored for the App Router.
 - **Next.js 12/13 Page Router:** Stick with [`next-runtime-env@1.x`][pages-router-branch-link].
