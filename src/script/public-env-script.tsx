@@ -4,7 +4,6 @@ import { type ScriptProps } from 'next/script';
 import { getPublicEnv } from '../helpers/get-public-env';
 import { type NonceConfig } from '../typings/nonce';
 import { EnvScript } from './env-script';
-import { enableDynamicRendering } from '../provider/enable-dynamic-rendering';
 
 type PublicEnvScriptProps = {
   nonce?: string | NonceConfig;
@@ -31,8 +30,6 @@ export const PublicEnvScript: FC<PublicEnvScriptProps> = ({
   disableNextScript,
   nextScriptProps,
 }) => {
-  enableDynamicRendering()
-
   // This value will be evaluated at runtime
   const publicEnv = getPublicEnv();
 
